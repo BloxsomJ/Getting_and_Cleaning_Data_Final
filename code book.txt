@@ -1,0 +1,61 @@
+Getting and Cleaning Data - peer assessment project
+
+###Description of variables.
+
+Data:  stores the funtion which reads in data from varoius folders.
+
+imported_y_data: stores data read in from folder which contain a "y" in them.
+
+imported_subject_data: stoes data from a folder with the name "subject" in them.
+
+features_data: stores data from the features.txt file.
+
+imported_x_data: stores data read in from folder which contain a "x" in them. Note this variable is modified later in the script- with means and std dev added to it.
+
+subsetted_data:  this varible stores the output of the grep'd means and std devs.
+
+read test data: stores the "test" funtion.
+
+read_train_data: stores the read train funtion.
+
+mergedataset: stores the function which combines "read_test_data" and "read_train_data"
+
+activitylabs: stores the function which reads the activity labels data in and merges it with "imported_x-Data"
+
+post_melt: stores reformatted data
+
+
+### Descrition of Scope
+
+Given:
+
+Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+
+Triaxial Angular velocity from the gyroscope.
+
+A 561-feature vector with time and frequency domain variables.
+
+Its activity label.
+
+An identifier of the subject who carried out the experiment.
+
+Will need to:
+
+After setting the source directory for the files, read in the following:
+
+features.txt, activity_labels.txt, subject_train.txt, x_train.txt, y_train.txt, subject_test.txt, x_test.txt, y_test.txt
+
+Extract only the measurements on the mean and standard deviation for each measurement.
+
+Subset this data to keep only the necessary columns.
+
+Use descriptive activity names to name the activities in the data set
+
+Merge data subset with the activityType table to cinlude the descriptive activity names
+
+Appropriately label the data set with descriptive activity names.
+
+Use gsub function for pattern replacement to clean up the data labels.
+
+Create a second, independent tidy data set with the average of each variable for each activity and each subject.
+
